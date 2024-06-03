@@ -1,0 +1,152 @@
+<LP7>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à notre solution de vente d'immobilier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #2C3E50;
+        }
+        header {
+            background-color: #6A0DAD;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            background-image: url(https://hellobiz.fr/wp-content/uploads/2017/04/Investir-dans-l-immobilier-est-il-toujours-interessant-pour-les-entrepreneurs-.jpg); /* Remplacer par l'URL de l'image */
+            background-size: cover;
+            background-position: center;
+        }
+        .header-content {
+            background-color: rgba(106, 13, 173, 0.8);
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #6A0DAD;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #6A0DAD;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #5a0c93;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a0c93;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            margin-top: 20px;
+        }
+        .checkbox-container {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 0;
+        }
+        .checkbox-container label {
+            margin-top: 0;
+        }
+    </style>
+    <script>
+        function toggleSubmitButton() {
+            var checkbox = document.getElementById('terms');
+            var submitButton = document.getElementById('submit');
+            submitButton.disabled = !checkbox.checked;
+            submitButton.style.opacity = checkbox.checked ? '1' : '0.5';
+            submitButton.style.cursor = checkbox.checked ? 'pointer' : 'not-allowed';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <p>Bienvenue sur notre solution de vente d'immobilier</p>
+            <p>ACCES GRATUIT. Inscrivez-vous pour découvrir comment notre logiciel peut transformer vos ventes immobilières</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Inscription à votre accès gratuit</h2>
+        <p>Remplissez le formulaire ci-dessous pour recevoir vos codes d'accès.</p>
+        <form action="https://example.com/submit" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="company">Société :</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="carteT">Avez-vous une carte T :</label>
+            <select id="carteT" name="carteT" required>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" onchange="toggleSubmitButton()">
+                <label for="terms">J'accepte les conditions générales et de ventes</label>
+            </div>
+            
+            <input type="submit" id="submit" value="Envoyer" disabled>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; @2024 Ikimo - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
